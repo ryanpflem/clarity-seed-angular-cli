@@ -1,19 +1,17 @@
-/*
- * Copyright (c) 2016 VMware, Inc. All Rights Reserved.
- * This software is released under MIT license.
- * The full license information can be found in LICENSE in the root directory of this project.
- */
-import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent } from './components/about/index';
-import { HomeComponent } from './components/home/index';
 
-
-export const ROUTES: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+export const routes: Routes = [
+  { path: '', redirectTo: 'components/home', pathMatch: 'full' },
+  {
+    path: 'components',
+    loadChildren: 'app/components/components.module#ComponentsModule'
+  }
 ];
 
-export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

@@ -1,0 +1,36 @@
+<h5>This is a page to help demonstrate a dropdown.</h5>
+<div class="row content">
+  <div class="col-md-4">
+    <clr-dropdown class="mb-1" [clrMenuPosition]="'bottom-right'" [clrCloseMenuOnItemClick]="true">
+      <button class="btn btn-outline-primary" clrDropdownToggle>
+        Dropdown
+        <clr-icon shape="caret" class="icon-orient-down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <label class="dropdown-header">Dropdown header</label>
+        <a href="javascript://" clrDropdownItem>Action 1</a>
+        <a href="javascript://" clrDropdownItem>Action 2</a>
+        <a href="javascript://" class="disabled" clrDropdownItem>Disabled</a>
+        <div class="dropdown-divider"></div>
+        <a href="javascript://" clrDropdownItem>Link 1</a>
+        <a href="javascript://" clrDropdownItem>Link 2</a>
+      </div>
+    </clr-dropdown>
+  </div>
+  <div class="col-md-4 push-md-4">
+    <clr-dropdown class="mb-1" [clrMenuPosition]="'bottom-left'" [clrCloseMenuOnItemClick]="true">
+      <button clrDropdownToggle>
+        <clr-icon shape="danger" class="icon-color-danger icon-size-md"></clr-icon>
+        <clr-icon shape="caret" class="icon-orient-down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <label class="dropdown-header">Dropdown header</label>
+        <a href="javascript://" clrDropdownItem>Action 1</a>
+        <a href="javascript://" clrDropdownItem>Action 2</a>
+        <div class="dropdown-divider"></div>
+        <a href="javascript://" clrDropdownItem>Link 1</a>
+        <a href="javascript://" clrDropdownItem>Link 2</a>
+      </div>
+    </clr-dropdown>
+  </div>
+</div>

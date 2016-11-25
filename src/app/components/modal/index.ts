@@ -3,13 +3,4 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-about',
-  templateUrl: 'about.component.html',
-  styleUrls: ['about.component.scss']
-})
-export class AboutComponent {
-
-}
+export * from './modal.component';
