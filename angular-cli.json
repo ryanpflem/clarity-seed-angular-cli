@@ -20,7 +20,7 @@
       "styles": [
         "../node_modules/clarity-icons/clarity-icons.min.css",
         "../node_modules/clarity-ui/clarity-ui.min.css",
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [
         "../node_modules/mutationobserver-shim/dist/mutationobserver.min.js",
@@ -34,8 +34,10 @@
       }
     }
   ],
-  "addons": [],
-  "packages": [],
+  "addons": [
+  ],
+  "packages": [
+  ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
@@ -47,7 +49,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,
