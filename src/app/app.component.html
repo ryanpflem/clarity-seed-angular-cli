@@ -35,8 +35,6 @@
     </div>
     <nav class="sidenav" [clr-nav-level]="2">
       <section class="sidenav-content">
-        <a class="nav-link" href="#" [routerLink]="['/home']" [class.active]="router.url==='/home' || router.url==='/'">Home</a>
-        <a class="nav-link" href="#" [routerLink]="['/about']" [class.active]="router.url==='/about'">About</a>
         <section class="nav-group collapsible">
           <input id="tabexample1" type="checkbox">
           <label for="tabexample1">Collapsible Nav Element</label>
@@ -51,9 +49,9 @@
           <ul class="nav-list">
             <a class="nav-link" href="#" [routerLink]="['/home']" [class.active]="router.url==='/home' || router.url==='/'">Home</a>
             <a class="nav-link" href="#" [routerLink]="['/about']" [class.active]="router.url==='/about'">About</a>
+            <li><a class="nav-link">Link 3</a></li>
             <li><a class="nav-link">Link 4</a></li>
             <li><a class="nav-link">Link 5</a></li>
-            <li><a class="nav-link">Link 6</a></li>
           </ul>
         </section>
       </section>
