@@ -1,0 +1,20 @@
+<section class="sidenav-content">
+  <section class="nav-group collapsible">
+    <input id="tabexample1" type="checkbox">
+    <label for="tabexample1">Collapsible Nav Element</label>
+    <ul class="nav-list">
+      <li><a class="nav-link" [routerLink]="[linkService.links.home]" [class.active]="router.url === linkService.links.home || router.url === '/'">Home</a></li>
+      <li><a class="nav-link" [routerLink]="[linkService.links.modal]" [class.active]="router.url === linkService.links.modal">Modal</a></li>
+      <li><a class="nav-link" [routerLink]="[linkService.links.dropdown]" [class.active]="router.url === linkService.links.dropdown">Dropdown</a></li>
+    </ul>
+  </section>
+  <section class="nav-group">
+    <input id="tabexample2" type="checkbox">
+    <label for="tabexample2">Default Nav Element</label>
+    <ul class="nav-list">
+      <li><a class="nav-link" [routerLink]="[linkService.links.home]" [class.active]="router.url === linkService.links.home || router.url === '/'">Home</a></li>
+      <li><a class="nav-link" [routerLink]="[linkService.links.modal]" [class.active]="router.url === linkService.links.modal">Modal</a></li>
+      <li><a class="nav-link" [routerLink]="[linkService.links.dropdown]" [class.active]="router.url === linkService.links.dropdown">Dropdown</a></li>
+    </ul>
+  </section>
+</section>

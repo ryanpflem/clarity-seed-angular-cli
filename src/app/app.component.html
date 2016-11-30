@@ -1,30 +1,24 @@
 <clr-main-container>
   <app-header-nav></app-header-nav>
+  <nav class="subnav" [clr-nav-level]="1">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[linkService.links.home]" [class.active]="router.url === linkService.links.home || router.url === '/'">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[linkService.links.modal]" [class.active]="router.url === linkService.links.modal">Modal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[linkService.links.dropdown]" [class.active]="router.url === linkService.links.dropdown">Dropdown</a>
+      </li>
+    </ul>
+  </nav>
   <div class="content-container">
-    <div class="content-area">
+    <main class="content-area">
       <router-outlet></router-outlet>
-    </div>
+    </main>
     <nav class="sidenav" [clr-nav-level]="2">
-      <section class="sidenav-content">
-        <section class="nav-group collapsible">
-          <input id="tabexample1" type="checkbox">
-          <label for="tabexample1">Collapsible Nav Element</label>
-          <ul class="nav-list">
-            <a class="nav-link" href="#" [routerLink]="['/components/home']" [class.active]="router.url==='/components/home' || router.url==='/'">Home</a>
-            <a class="nav-link" href="#" [routerLink]="['/components/modal']" [class.active]="router.url==='/components/modal'">modal</a>
-            <a class="nav-link" href="#" [routerLink]="['/components/dropdown']" [class.active]="router.url==='/components/dropdown'">dropdown</a>
-          </ul>
-        </section>
-        <section class="nav-group">
-          <input id="tabexample2" type="checkbox">
-          <label for="tabexample2">Default Nav Element</label>
-          <ul class="nav-list">
-            <a class="nav-link" href="#" [routerLink]="['/components/home']" [class.active]="router.url==='/components/home' || router.url==='/'">Home</a>
-            <a class="nav-link" href="#" [routerLink]="['/components/modal']" [class.active]="router.url==='/components/modal'">modal</a>
-            <a class="nav-link" href="#" [routerLink]="['/components/dropdown']" [class.active]="router.url==='/components/dropdown'">dropdown</a>
-          </ul>
-        </section>
-      </section>
+      <app-side-nav></app-side-nav>
     </nav>
   </div>
 </clr-main-container>

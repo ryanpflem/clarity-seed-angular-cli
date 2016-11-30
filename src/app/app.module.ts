@@ -5,16 +5,19 @@ import { HttpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
 
 import { AppRoutingModule } from './app.routing';
+import { LinkService } from './shared/link.service';
 
 import { AppComponent } from './app.component';
-import { HeaderNavComponent } from './layouts';
+import { HeaderNavComponent, SideNavComponent } from './layouts';
+
 import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     ComponentsModule,
   ],
-  providers: [],
+  providers: [LinkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-<clr-header>
+<clr-header class="header header-6">
   <div class="branding">
     <a href="#" class="nav-link">
       <span class="clr-icon clr-clarity-logo"></span>
@@ -24,13 +24,3 @@
     </clr-dropdown>
   </div>
 </clr-header>
-<nav class="sub-nav" [clr-nav-level]="1">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#" [routerLink]="['/components/home']" [class.active]="router.url==='/components/home' || router.url==='/'">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" [routerLink]="['/components/modal']" [class.active]="router.url==='/components/modal'">modal</a>
-    </li>
-  </ul>
-</nav>
