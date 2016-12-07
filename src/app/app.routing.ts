@@ -3,7 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'components/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: '',
+    loadChildren: 'app/static-pages/static-pages.module#StaticPagesModule'
+  },
   {
     path: 'components',
     loadChildren: 'app/components/components.module#ComponentsModule'

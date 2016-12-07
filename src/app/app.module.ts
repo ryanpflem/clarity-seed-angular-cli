@@ -11,13 +11,14 @@ import { AppComponent } from './app.component';
 import { HeaderNavComponent, SideNavComponent } from './layouts';
 
 import { ComponentsModule } from './components/components.module';
+import { StaticPagesModule } from './static-pages/static-pages.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderNavComponent,
-    SideNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +26,7 @@ import { ComponentsModule } from './components/components.module';
     HttpModule,
     ClarityModule,
     AppRoutingModule,
+    StaticPagesModule,
     ComponentsModule,
   ],
   providers: [LinkService],

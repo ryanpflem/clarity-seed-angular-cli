@@ -3,13 +3,20 @@
   <nav class="subnav" [clr-nav-level]="1">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="[linkService.links.home]" [class.active]="router.url === linkService.links.home || router.url === '/'">Home</a>
+        <a class="nav-link" 
+          (click)=getUrl()
+          [routerLink]="[linkService.subMenuLinks.home]" 
+          [class.active]="router.url === linkService.subMenuLinks.home || router.url === '/'">
+          Home
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="[linkService.links.modal]" [class.active]="router.url === linkService.links.modal">Modal</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[linkService.links.dropdown]" [class.active]="router.url === linkService.links.dropdown">Dropdown</a>
+        <a class="nav-link" 
+          (click)=getUrl()
+          [routerLink]="[linkService.subMenuLinks.components]" 
+          [class.active]="router.url.includes('components') === true">
+          Components
+        </a>
       </li>
     </ul>
   </nav>
@@ -17,7 +24,7 @@
     <main class="content-area">
       <router-outlet></router-outlet>
     </main>
-    <nav class="sidenav" [clr-nav-level]="2">
+    <nav class="sidenav" [clr-nav-level]="2" *ngIf="router.url.includes('components') === true">
       <app-side-nav></app-side-nav>
     </nav>
   </div>
