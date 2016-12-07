@@ -11,6 +11,10 @@ export const routes: Routes = [
   {
     path: 'components',
     loadChildren: 'app/components/components.module#ComponentsModule'
+  },
+  {
+    path: 'items',
+    loadChildren: 'app/items/items.module#ItemsModule'
   }
 ];
 

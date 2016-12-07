@@ -18,6 +18,14 @@
           Components
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" 
+          (click)=getUrl()
+          [routerLink]="[linkService.subMenuLinks.items]" 
+          [class.active]="router.url.includes('items') === true">
+          Items
+        </a>
+      </li>
     </ul>
   </nav>
   <div class="content-container">

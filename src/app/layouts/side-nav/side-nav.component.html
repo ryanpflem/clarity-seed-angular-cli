@@ -3,18 +3,42 @@
     <input id="tabexample1" type="checkbox">
     <label for="tabexample1">Collapsible Nav Element</label>
     <ul class="nav-list">
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.home]" [class.active]="router.url === linkService.sideNavLink.home || router.url === '/'">Home</a></li>
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.modal]" [class.active]="router.url === linkService.sideNavLink.modal">Modal</a></li>
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.dropdown]" [class.active]="router.url === linkService.sideNavLink.dropdown">Dropdown</a></li>
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.home]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.home || router.url === '/'">
+        Home
+      </a></li>
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.modal]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.modal">
+        Modal
+      </a></li>
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.dropdown]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.dropdown">
+        Dropdown
+      </a></li>
     </ul>
   </section>
-  <section class="nav-group">
+  <section class="nav-group" *ngIf="router.url.includes('components') === false">
     <input id="tabexample2" type="checkbox">
     <label for="tabexample2">Default Nav Element</label>
-    <ul class="nav-list">
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.home]" [class.active]="router.url === linkService.sideNavLink.home || router.url === '/'">Home</a></li>
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.modal]" [class.active]="router.url === linkService.sideNavLink.modal">Modal</a></li>
-      <li><a class="nav-link" [routerLink]="[linkService.sideNavLink.dropdown]" [class.active]="router.url === linkService.sideNavLink.dropdown">Dropdown</a></li>
+     <ul class="nav-list">
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.home]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.home || router.url === '/'">
+        Home
+      </a></li>
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.modal]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.modal">
+        Modal
+      </a></li>
+      <li><a class="nav-link" 
+        [routerLink]="[linkService.sideNavLinkComponents.dropdown]" 
+        [class.active]="router.url === linkService.sideNavLinkComponents.dropdown">
+        Dropdown
+      </a></li>
     </ul>
   </section>
 </section>

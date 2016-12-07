@@ -1,12 +1,15 @@
 export class LinkService {
+
   subMenuLinks = {
     home: '/home',
-    components: '/components/home'
+    components: '/components/home',
+    items: '/items'
   };
 
-  sideNavLink = {
+  sideNavLinkComponents = {
     home: '/components/home',
     modal: '/components/modal',
     dropdown: '/components/dropdown'
   };
+
 }
