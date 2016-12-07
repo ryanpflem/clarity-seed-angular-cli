@@ -8,6 +8,7 @@ import { ItemsComponent } from './items.component';
 
 import { ItemsRoutingModule } from './items.routing';
 import { ItemsListComponent } from './items-list/items-list.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ItemsListComponent } from './items-list/items-list.component';
     ClarityModule,
     ItemsRoutingModule
   ],
-  declarations: [ItemsComponent, ItemsListComponent]
+  declarations: [ItemsComponent, ItemsListComponent, ItemDetailComponent]
 })
 export class ItemsModule { }

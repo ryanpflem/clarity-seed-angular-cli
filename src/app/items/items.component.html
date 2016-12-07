@@ -1,3 +1,10 @@
 <div>
-  <app-items-list></app-items-list>
+  <app-item-detail [item]="selectedItem"
+                   (saved)="saveItem($event)"
+                   (cancelled)="resetItem($event)">
+  </app-item-detail>
+  
+  <app-items-list [items]="items$ | async"
+                  (selected)="selectItem($event)">
+  </app-items-list>  
 </div>

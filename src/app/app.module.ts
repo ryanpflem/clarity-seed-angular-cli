@@ -7,7 +7,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app.routing';
 import { LinkService } from './shared/link.service';
-import { ItemsService, items } from './shared';
+import { ItemsService, items, UsersService, users } from './shared';
 
 import { AppComponent } from './app.component';
 import { HeaderNavComponent, SideNavComponent } from './layouts';
@@ -32,9 +32,9 @@ import { ItemsModule } from './items/items.module';
     StaticPagesModule,
     ComponentsModule,
     ItemsModule,
-    StoreModule.provideStore({ items })
+    StoreModule.provideStore({ items, users })
   ],
-  providers: [LinkService, ItemsService],
+  providers: [LinkService, ItemsService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+<h3 *ngIf="selectedItem.id">Editing {{originalName}}</h3>
+
+<div class="row" *ngIf="selectedItem.id">
+  <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="card-header">
+        Item ID: {{selectedItem.id}}
+      </div>
+      <div class="card-block">
+        <div class="card-title">
+          <label>Item Name: </label>
+          <input [(ngModel)]="selectedItem.name"
+                name="name"
+                placeholder="Enter a name"
+                type="text">
+        </div>
+        <div class="card-text">
+          <label>Description: </label>          
+          <textarea [(ngModel)]="selectedItem.description" 
+                    name="description" 
+                    placeholder="Enter a Description"
+                    cols="30" rows="4">
+          </textarea>
+          <label for="user">User: </label>
+          <select [(ngModel)]="selectedItem.user" 
+                  name="user">
+            <option value="undefined">Select...</option>
+            <option *ngFor="let user of users$ | async" [ngValue]="user.id">{{user.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-sm btn-link" type="submit" (click)="cancelled.emit(selectedItem)">Cancel</button>
+        <button class="btn btn-sm btn-link" type="submit" (click)="saved.emit(selectedItem)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

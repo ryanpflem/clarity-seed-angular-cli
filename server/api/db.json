@@ -10,13 +10,13 @@
       "id": 2,
       "name": "Item 2",
       "description": "This is a description edtied",
-      "user": 3
+      "user": 2
     },
     {
       "id": 3,
       "name": "Item 3",
       "description": "This is a lovely item edited again!",
-      "user": 2
+      "user": 3
     }
   ],
   "users": [
