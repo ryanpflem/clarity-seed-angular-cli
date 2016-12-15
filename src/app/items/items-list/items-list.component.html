@@ -1,15 +1,19 @@
-<clr-datagrid>
-    <clr-dg-column [clrDgField]="'id'">Item ID</clr-dg-column>
-    <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
-    <clr-dg-column [clrDgField]="'description'">Description</clr-dg-column>
-    <clr-dg-column [clrDgField]="'user'">User</clr-dg-column>
+<div class="row">
+  <div class="col-lg-10 offset-lg-1 col-xs-12">
+    <clr-datagrid>
+      <clr-dg-column [clrDgField]="'id'">Item ID</clr-dg-column>
+      <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+      <clr-dg-column [clrDgField]="'description'">Description</clr-dg-column>
+      <clr-dg-column [clrDgField]="'userId'">User ID</clr-dg-column>
 
-    <clr-dg-row *clrDgItems="let item of items" (click)="selected.emit(item)">
-      <clr-dg-cell>{{item.id}}</clr-dg-cell>
-      <clr-dg-cell>{{item.name}}</clr-dg-cell>
-      <clr-dg-cell>{{item.description}}</clr-dg-cell>
-      <clr-dg-cell>{{item.user}}</clr-dg-cell>
-    </clr-dg-row>
+      <clr-dg-row *clrDgItems="let item of items" (click)="selected.emit(item)">
+        <clr-dg-cell>{{item.id}}</clr-dg-cell>
+        <clr-dg-cell>{{item.name}}</clr-dg-cell>
+        <clr-dg-cell>{{item.description}}</clr-dg-cell>
+        <clr-dg-cell>{{item.userId}}</clr-dg-cell>
+      </clr-dg-row>
 
-    <clr-dg-footer>{{items.length}} Items</clr-dg-footer>
-</clr-datagrid>
+      <clr-dg-footer>{{items.length}} Items</clr-dg-footer>
+    </clr-datagrid>
+  </div>
+</div>

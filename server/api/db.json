@@ -4,19 +4,19 @@
       "id": 1,
       "name": "Item 1",
       "description": "This is a description",
-      "user": 1
+      "userId": 1
     },
     {
       "id": 2,
       "name": "Item 2",
       "description": "This is a description edtied",
-      "user": 2
+      "userId": 2
     },
     {
       "id": 3,
       "name": "Item 3",
       "description": "This is a lovely item edited again!",
-      "user": 3
+      "userId": 3
     }
   ],
   "users": [
